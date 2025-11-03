@@ -3,6 +3,22 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCartCount();
   updateCartCountMobile();
 
+  window.addEventListener("pageshow", () => {
+    updateFavCount();
+    updateCartCount();
+    updateCartCountMobile();
+  });
+
+  window.addEventListener("storage", (e) => {
+    if (e.key === "cartPro") {
+      updateCartCount();
+      updateCartCountMobile();
+    }
+    if (e.key === "favProducts") {
+      updateFavCount();
+    }
+  });
+
   const productContainer = document.getElementById("productContainer");
   const value = new URLSearchParams(window.location.search).get("search");
   const recentSearch = localStorage.getItem("recentSearch");

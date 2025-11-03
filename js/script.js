@@ -263,6 +263,22 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCartCount();
   updateCartCountMobile();
 
+  window.addEventListener("pageshow", () => {
+    updateFavCount();
+    updateCartCount();
+    updateCartCountMobile();
+  });
+
+  window.addEventListener("storage", (e) => {
+    if (e.key === "cartPro") {
+      updateCartCount();
+      updateCartCountMobile();
+    }
+    if (e.key === "favProducts") {
+      updateFavCount();
+    }
+  });
+
   // Fetch all categories
   fetchAndDisplayCategory("tops", "topContainer");
   fetchAndDisplayCategory("womens-dresses", "womenDressContainer");

@@ -15,6 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTotal(cart);
   });
 
+  window.addEventListener("storage", (e) => {
+    if (e.key === "cartPro") {
+      const cart = getCartProduct();
+      displayCartProduct(cart);
+      updateTotal(cart);
+    }
+  });
+
   cartContainer.addEventListener("click", (e) => {
     const removeItem = e.target.closest(".removeitem");
     if (removeItem) {
@@ -89,7 +97,7 @@ function displayCartProduct(cart) {
           <td class="flex md:size-40 size-30">
             <img src="${p.thumbnail}" alt="${p.title}" class="" />
           </td>
-          <td class="min-w-[150px] text align-top p-[10px]">${p.title}</td>
+          <td class="min-w-[150px] align-top p-[10px]">${p.title}</td>
           <td class="text-center font-bold p-[10px] align-top">$${p.price}</td>
           <td class="p-[10px] pl-0 text-center align-top">
             <select 
