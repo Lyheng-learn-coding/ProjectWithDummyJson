@@ -1,0 +1,36 @@
+.parent {
+  display: grid;
+  grid-template-areas:
+    "left left middle middle right right"
+    "left left middle middle right right"
+    "bLeft bLeft bLeft bRight bRight bRight"
+    "bLeft bLeft bLeft bRight bRight bRight"
+    "bLeft bLeft bLeft bRight bRight bRight";
+  gap: 20px;
+}
+
+.div1 {
+  grid-area: left;
+}
+
+.div2 {
+  grid-area: middle;
+}
+
+.div3 {
+  grid-area: right;
+}
+
+.div4 {
+  grid-area: bLeft;
+}
+
+.div5 {
+  grid-area: bRight;
+}
+
+@media screen and (max-width: 350px) {
+  .parent {
+    gap: 10px;
+  }
+}
