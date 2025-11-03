@@ -370,6 +370,8 @@ searchProductBtn.addEventListener("click", (e) => {
   if (searchValue) {
     localStorage.setItem("recentSearch", searchValue);
     window.location.href = `../public/searchContainer.html?search=${searchValue}`;
+    searchContainer.classList.remove("top-0");
+    searchContainer.classList.add("top-[-100%]");
   }
 });
 
