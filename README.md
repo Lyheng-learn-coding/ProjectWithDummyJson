@@ -1,6 +1,6 @@
 # Dina Shop - E-commerce Storefront
 
-Dina Shop is a front-end e-commerce websit built with HTML, Tailwind CSS, and vanilla JavaScript. It uses the [dummyjson.com](https://dummyjson.com/) API to simulate a real-world shopping experience, allowing users to browse products, search for items, manage a shopping cart, and save their favorite products.
+Dina Shop is a front-end e-commerce website built with HTML, Tailwind CSS, and vanilla JavaScript. It uses the [dummyjson.com](https://dummyjson.com/) API to simulate a real-world shopping experience, allowing users to browse products, search for items, manage a shopping cart, and save their favorite products.
 
 ## Features
 
