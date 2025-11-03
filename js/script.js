@@ -372,6 +372,8 @@ searchProductBtn.addEventListener("click", (e) => {
     window.location.href = `../public/searchContainer.html?search=${searchValue}`;
     searchContainer.classList.remove("top-0");
     searchContainer.classList.add("top-[-100%]");
+    overlayDark.classList.add("hidden");
+    overlayDark.classList.remove("block");
   }
 });
 
